@@ -2,6 +2,7 @@
     font: 10px sans-serif;
     text-anchor: middle;
     stroke: rgb(16, 130, 165);
+    text-rendering: optimize-legibility;
   }
   
   .arc path {

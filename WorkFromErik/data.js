@@ -30,8 +30,8 @@ if (error) throw error;
 
 console.log(pie(data))
 
-var width = 960,
-height = 600,
+var width = 350,
+height = 350,
 radius = Math.min(width, height) / 2;
 
 var color = d3.scaleOrdinal()
@@ -41,15 +41,15 @@ var arc = d3.arc()
 .outerRadius(radius - 10)
 .innerRadius(0);
 
-var labelArc = d3.arc()
-.outerRadius(radius + 20)
-.innerRadius(radius + 10);
+// var labelArc = d3.arc()
+// .outerRadius(radius + 20)
+// .innerRadius(radius + 10);
 
-var svg = d3.select("body").append("svg")
-.attr("width", width + 100)
-.attr("height", height + 50)
+var svg = d3.select(".card-body").append("svg")
+.attr("width", width + 500)
+.attr("height", height + 200)
 .append("g")
-.attr("transform", "translate(" + (width + 100)/ 2 + "," + (height + 50) / 2 + ")");
+.attr("transform", "translate(" + (width + 200)/ 2 + "," + (height + 200) / 2 + ")");
 
 var g = svg.selectAll(".arc")
   .data(pie(data))
@@ -60,9 +60,18 @@ g.append("path")
   .attr("d", arc)
   .style("fill", function(d) { return color(d.data.share); });
 
+var pos = d3.arc().innerRadius(radius + 2).outerRadius(radius + 2); 
+  
+var getAngle = function (d) {
+      return (180 / Math.PI * (d.startAngle + d.endAngle) / 2 - 90);
+  };
+
 g.append("text")
-  .attr("transform", function(d) { return "translate(" + labelArc.centroid(d) + ")"; })
-  .attr("dy", ".00001em")
+  .attr("transform", function(d) {
+    return "translate(" + pos.centroid(d) + ") " +
+    "rotate(" + getAngle(d) + ")"; }) 
+  .attr("dy", ".8em")
+  .style("text-anchor", "start")
   .text(function(d) { 
     if (csv === 'tld') {
       return d.data.tlds;
@@ -77,7 +86,43 @@ function type(d) {
   d.share = +d.share;
   return d;
   }
-}
+};
 
+function myFunction2() {
+  d3.select("svg").remove();
+  var csv = document.getElementById("myList2").value;
+  console.log(csv);
+  var csvFile = "/csv/" + csv + ".csv";
 
+d3.csv(csvFile, type, function(error, data) {
+if (error) throw error;
 
+line_graph = new Dygraph(
+  document.getElementById("graphdiv2"),
+  csvFile,
+  // "/csv/tld_historical.csv", 
+  {
+    rollPeriod: 15,
+    errorBars: true,
+    showRoller: true,
+    labelsKMG2:true,
+    legend: 'always',
+  }
+);
+
+line_graph.ready(function() {
+  line_graph.setAnnotations([
+  {
+    series: "Total Domains",
+    x: "1/1/2017",
+    shortText: "B",
+    text: "Start Date"
+  }
+  ]);
+});
+
+})
+function type(d) {
+  d.count = +d.count;
+  return d;
+  }}
