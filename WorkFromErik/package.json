@@ -8,5 +8,10 @@
     "author": "",
     "devDependencies": {
         "lite-server": "^2.3.0"
+    },
+    "dependencies": {
+        "d3pie": "^0.2.1",
+        "github-download": "^0.5.0",
+        "prettify": "^0.1.7"
     }
 }
