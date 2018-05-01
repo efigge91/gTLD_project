@@ -31,24 +31,26 @@
                             Visualizations
                         </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="index.html">Home</a>
-                                <a class="dropdown-item" href="registry.html">Register</a>
-                                <a class="dropdown-item" href="registrant.html">Registrant</a>
+                                <a class="dropdown-item" href="index.html">Main</a>
+                                <a class="dropdown-item" href="registrar.html">Registrar</a>
+                                <a class="dropdown-item" href="registry.html">Registry</a>
+                                <a class="dropdown-item" href="tld.html">TLDs</a>
+
                             </div>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="comparison.html">Background Info</a>
+                      <a class="nav-link" href="#">Background Info</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="data.html">Data</a>
+                      <a class="nav-link" href="#">Data</a>
                     </li>
                   </ul>
                 </div>
-    </header> 
+    </header>
     <div class="container">
         <div class='card'>
             <div class='card-header text-white'>
-                <h3 class='text-center'>D3.js</h3>
+                <h3 class='text-center'>TLD by Registrar</h3>
             </div>
             <div class='card-body'>
                 <p></p>
@@ -56,16 +58,14 @@
                 <div class='card'>
                     <select id="myList" onchange="myFunction()">
                         <option selected value=""></option>
-                        <option value ="tld">tlds</option>
-                        <option value ="loan_registrar">.loan</option>
-                        <option value ="top_registrar">.top</option>  
-                        <option value ="xyz_registrar">.xyz</option>
-                        <option value ="club_registrar">.club</option>  
-                        <option value ="vip_registrar">.vip</option>  
-                        <option value ="online_registrar">.online</option>  
-                        <option value ="win_registrar">.win</option>  
-                        <option value ="wang_registrar">.wang</option>  
-                        <option value ="shop_registrar">.shop</option>  
+                        <option value ="registrars">registrars</option>  
+                        <option value ="registries">registries</option>  
+                        <option value ="tld">tlds</option>                        <option value ="Alibaba_tld">Alibaba</option>
+                        <option value ="AlibabaSingapore_tld">AlibabaSingapore</option>  
+                        <option value ="Chengdu_tld">Chengdu</option>
+                        <option value ="GMO_tld">GMO</option>  
+                        <option value ="GoDaddy_tld">GoDaddy</option>  
+                        <option value ="NameCheap_tld">NameCheap</option> 
                     </select>
                 </div>
                 </div>
@@ -84,7 +84,7 @@
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script src="data.js" type="text/javascript"></script>
+<script src="registrar.js" type="text/javascript"></script>
 
 
 </body>

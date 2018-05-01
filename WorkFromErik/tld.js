@@ -67,8 +67,14 @@ g.append("text")
     if (csv === 'tld') {
       return d.data.tlds;
     } else {
+    if (csv === 'registrars') {
+      return d.data.registrars;
+    } else 
+    if (csv === 'registries') {
+      return d.data.registries;
+    } else
       return d.data.registrar;
-    } });
+    }});
 });
 function type(d) {
   d.share = +d.share;

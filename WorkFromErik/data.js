@@ -22,8 +22,8 @@ toggle between hiding and showing the dropdown content */
 function myFunction() {
   d3.select("svg").remove();
   var csv = document.getElementById("myList").value;
-    console.log(csv);
-    var csvFile = "/csv/" + csv + ".csv";
+  console.log(csv);
+  var csvFile = "/csv/" + csv + ".csv";
 
 d3.csv(csvFile, type, function(error, data) {
 if (error) throw error;
@@ -66,9 +66,12 @@ g.append("text")
   .text(function(d) { 
     if (csv === 'tld') {
       return d.data.tlds;
+    } else if (csv === 'registrars') {
+      return d.data.registrars;
     } else {
-      return d.data.registrar;
-    } });
+      return d.data.registries;
+    }
+  });
 });
 function type(d) {
   d.share = +d.share;
