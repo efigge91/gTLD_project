@@ -1,0 +1,63 @@
+.lead {
+    font-size: 25px;
+    color:white;
+}
+
+.jumbotron > .col-md-12 {
+    padding-top: 1.00rem;
+    padding-bottom: .5rem;
+    margin: 1.00rem;
+    border-radius: 5%;
+    background-color: white;
+    border: 1px solid white;
+}
+
+.navbar {
+    color:white;
+}
+
+.dropdown-item {
+    font-size: 15px; 
+    color:white;
+}
+
+.mynav {
+    padding: 0;
+}
+.smaller {
+    font-size: 14px;
+}
+.larger {
+    font-size: 20px;
+    color: red;
+}
+.card .col-md-12 {
+    margin: 5px;
+}
+.list-group-item:hover {
+    background-color:white;
+} 
+.line_chart {
+    background-color: whitesmoke;
+    border: 2px solid red;
+}
+.button {
+    background-color: blue; 
+    border: none;
+    color: white;
+    padding: 12px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    float: center;
+    border: 1px solid blue;
+}
+
+.button:active {
+    background-color:green;
+}
+
+.button:visited {
+    background-color:green;
+}

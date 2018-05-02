@@ -1,0 +1,16 @@
+{
+    "name": "cssexample",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "start": "lite-server"
+    },
+    "author": "",
+    "devDependencies": {
+        "lite-server": "^2.3.0"
+    },
+    "dependencies": {
+        "dygraphs": "^2.1.0",
+        "papaparse": "^4.4.0"
+    }
+}
